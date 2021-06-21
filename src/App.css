@@ -31,3 +31,9 @@ header{
     font-size: 2rem;
     border-bottom: .1rem solid gray;
 }
+.product-container{
+    margin-top: 2rem;
+    padding: 1.5rem;
+    font-size: 2rem;
+    display: flex;
+}

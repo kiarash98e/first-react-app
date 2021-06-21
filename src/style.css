@@ -1,0 +1,17 @@
+.product-card img{
+    height: 35rem;
+}
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.card-info button{
+    border-radius: 0.6rem;
+    padding: 0.5rem 1rem;
+    background-color: #f1ff76;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

@@ -1,4 +1,6 @@
+import React from 'react'
 import './App.css'
+import ProductCard from './components/ProductCard/productCard.jsx'
 function App() {
   return (
     <div>
@@ -39,17 +41,11 @@ function App() {
           </section>
           <section>
             <div className="product-container">
-              <div className="product-card">
-                <div>
-                  <img src="https://react-shopping-cart-seven-lovat.vercel.app/images/dress1.jpg" alt="" />
-                  <p>midi sunders with shirring detail</p>
-                </div>
-                <div>
-                  <div>$29.8</div>
-                  <div>
-                    <button>add to cart</button>
-                  </div>
-                </div>
+              <div className="product-item">
+                <ProductCard/>
+              </div>
+              <div className="product-item">
+                <ProductCard/>
               </div>
             </div>
           </section>
