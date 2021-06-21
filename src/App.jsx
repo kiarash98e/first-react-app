@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import ProductCard from './components/ProductCard/productCard.jsx'
+import ProductCard from './components/ProductCard/ProductCard.jsx'
 function App() {
   return (
     <div>
