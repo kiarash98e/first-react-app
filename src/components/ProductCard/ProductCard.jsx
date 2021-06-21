@@ -1,14 +1,14 @@
 import React from 'react'
 import './style.css'
-function ProductCard() {
+function ProductCard(props) {
     return (
         <div className="product-card">
             <div>
-                <img src="https://react-shopping-cart-seven-lovat.vercel.app/images/dress1.jpg" alt="" />
-                <p>midi sunders with shirring detail</p>
+                <img src={props.src} alt="" />
+                <p>{props.describtion}</p>
             </div>
             <div className="card-info">
-                <div>$29.8</div>
+                <div>${props.price}</div>
                 <div>
                     <button>add to cart</button>
                 </div>

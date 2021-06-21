@@ -1,52 +1,57 @@
 import React from 'react'
 import './App.css'
 import ProductCard from './components/ProductCard/ProductCard.jsx'
+import ProductFilters from './components/ProductFilters/ProductFilters.jsx'
+import Header from './components/Header/Header.jsx'
 function App() {
+  const product = [
+    {
+      title:"mindy are vv1",
+      src:"https://react-shopping-cart-seven-lovat.vercel.app/images/dress1.jpg",
+      price:"29.4",
+      id:1,
+    },
+    {
+      title:"svar are vv1",
+      src:"https://react-shopping-cart-seven-lovat.vercel.app/images/dress2.jpg",
+      price:"28.3",
+      id:2,
+    },
+    {
+      title:"sete are vv1",
+      src:"https://react-shopping-cart-seven-lovat.vercel.app/images/dress3.jpg",
+      price:"14.5",
+      id:3,
+    },
+    {
+      title:"manda are vv1",
+      src:"https://react-shopping-cart-seven-lovat.vercel.app/images/dress4.jpg",
+      price:"34.2",
+      id:4,
+    }
+  ]
   return (
     <div>
-        <header>
-          <div> 
-            <p>React Shopping Cart</p>
-          </div>
-        </header>
+        <Header title={'React Shopping center'}/>
         <main>
           <section className="main">
             <section>
-              <div className="filters-container">
-                <div>
-                  6 products
-                </div>
-                <div>
-                  <label htmlFor="order">order</label>
-                  <select name="select-order" id="order">
-                    <option >latest</option>
-                    <option >lowest</option>
-                    <option >highest</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor={"filter"}>filter</label>
-                  <select name="select-filter" id="filter">
-                    <option >all</option>
-                    <option >xs</option>
-                    <option >s</option>
-                    <option >m</option>
-                    <option >l</option>
-                    <option >xl</option>
-                    <option >xxl</option>
-                  </select>
-                </div>
-              </div>
+              <ProductFilters/>
             </section>
           </section>
           <section>
             <div className="product-container">
-              <div className="product-item">
-                <ProductCard/>
-              </div>
-              <div className="product-item">
-                <ProductCard/>
-              </div>
+              
+                {
+                  product.map((item , index) => {
+                    return(
+                      <div key={item.id} className="product-item">
+                        <ProductCard src={item.src} describtion={item.title} price={item.price} />
+                      </div>
+                    )
+                  })
+                }
+              
             </div>
           </section>
             <div className="cart">
