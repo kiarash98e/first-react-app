@@ -4,7 +4,7 @@ export default function ProductFilters() {
     return (
         <div className="filters-container">
             <div>
-                6 products
+                4 products
             </div>
             <div>
                 <label htmlFor="order">order</label>

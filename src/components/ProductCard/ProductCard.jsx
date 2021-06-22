@@ -1,16 +1,16 @@
 import React from 'react'
 import './style.css'
-function ProductCard(props) {
+function ProductCard(src='',describtion='',price='',onClick) {
     return (
         <div className="product-card">
             <div>
-                <img src={props.src} alt="" />
-                <p>{props.describtion}</p>
+                <img src={src} alt="" />
+                <p>{describtion}</p>
             </div>
             <div className="card-info">
-                <div>${props.price}</div>
+                <div>${price}</div>
                 <div>
-                    <button>add to cart</button>
+                    <button onClick={onClick}>add to cart</button>
                 </div>
             </div>
         </div>
