@@ -32,10 +32,12 @@ header{
     border-bottom: .1rem solid gray;
 }
 .product-container{
+    order: -1;
     margin-top: 2rem;
     padding: 1.5rem;
     font-size: 2rem;
     display: flex;
+    flex-wrap: wrap;
 }
 .product-item{
     margin: 0.5rem 5.3rem;

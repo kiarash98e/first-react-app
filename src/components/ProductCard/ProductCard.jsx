@@ -1,6 +1,15 @@
 import React from 'react'
 import './style.css'
-function ProductCard(src='',describtion='',price='',onClick) {
+function ProductCard({cartItem,setCartItem,src,describtion,price}) {
+    function show () {
+        let item = {
+            src:src,
+            describtion:describtion,
+            price:price,
+            
+        }
+        setCartItem([...cartItem,item])
+    }
     return (
         <div className="product-card">
             <div>
@@ -10,7 +19,7 @@ function ProductCard(src='',describtion='',price='',onClick) {
             <div className="card-info">
                 <div>${price}</div>
                 <div>
-                    <button onClick={onClick}>add to cart</button>
+                    <button onClick={show}>add to cart</button>
                 </div>
             </div>
         </div>
